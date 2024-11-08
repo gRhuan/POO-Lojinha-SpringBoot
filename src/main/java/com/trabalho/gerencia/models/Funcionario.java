@@ -23,6 +23,9 @@ public class Funcionario {
     @Column(name = "BAIRRO", length = 20, nullable = false)
     private String bairro;
 
+    @Column(name = "UF", length = 2, nullable = false)
+    private String uf;
+
     @Column(name = "CIDADE", length = 25, nullable = false)
     private String cidade;
 
@@ -86,4 +89,13 @@ public class Funcionario {
         this.salario = salario;
     }
 
+    public String getUf() {
+        return uf;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+
+    
 }

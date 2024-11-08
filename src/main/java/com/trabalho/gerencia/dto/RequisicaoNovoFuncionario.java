@@ -12,6 +12,7 @@ public class RequisicaoNovoFuncionario {
     private String endereco;
     private String cidade;
     private String bairro;
+    private String uf;
     private BigDecimal salario;
 
     public Funcionario toFuncionario(){
@@ -21,6 +22,7 @@ public class RequisicaoNovoFuncionario {
         funcionario.setSalario(this.salario);
         funcionario.setBairro(this.bairro);
         funcionario.setCidade(this.cidade);
+        funcionario.setUf(this.uf);
         funcionario.setCpf(this.cpf);
         return funcionario;
     }
@@ -62,5 +64,12 @@ public class RequisicaoNovoFuncionario {
         this.salario = salario;
     }
 
+    public String getUf() {
+        return uf;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
     
 }
