@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Editar Cliente</h2>
+        <form action="/clientes/atualizar/{{cliente.id}}" method="post">
+            <!-- Nome -->
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="{{cliente.nome}}" required>
+            </div>
+
+            <!-- CPF -->
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" value="{{cliente.cpf}}" required>
+            </div>
+
+            <!-- Endereço -->
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" class="form-control" id="endereco" name="endereco" value="{{cliente.endereco}}" required>
+            </div>
+
+            <!-- Cidade -->
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" value="{{cliente.cidade}}" required>
+            </div>
+
+            <!-- Bairro -->
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="bairro" name="bairro" value="{{cliente.bairro}}" required>
+            </div>
+
+            <!-- UF -->
+            <div class="form-group">
+                <label for="uf">UF</label>
+                <input type="text" class="form-control" id="uf" name="uf" value="{{cliente.uf}}" required>
+            </div>
+
+            <!-- Botão para Salvar -->
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <a href="/clientes" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
